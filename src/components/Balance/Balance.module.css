@@ -1,0 +1,13 @@
+.balance__container {
+    padding: 10px;
+}
+
+.balance__heading {
+    margin: 0;
+}
+
+.balance__figures {
+    font-size: 40px;
+    font-weight: 600;
+    color: #40007f;
+}
