@@ -2,7 +2,7 @@ import React from 'react';
 import { Header } from './components';
 import { Balance } from './components';
 import { IncomeExpense } from './components';
-import TransactionList from './components/TransactionList/TransactionList';
+import { TransactionList } from './components';
 import AddTransactionFrom from './components/AddTransactionForm/AddTransactionForm';
 import style from './App.module.css';
 
