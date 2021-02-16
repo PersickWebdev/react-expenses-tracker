@@ -1,21 +1,20 @@
 import React from 'react';
 import style from './App.module.css';
-
-import Header from "./components/Header/Header";
-import Balance from "./components/Balance/Balance";
-import IncomeExpense from "./components/IncomeExpense/IncomeExpense";
-import TransactionList from "./components/TransactionList/TransactionList";
-import AddTransactionFrom from "./components/AddTransactionForm/AddTransactionForm";
+import Header from './components/Header/Header';
+import Balance from './components/Balance/Balance';
+import IncomeExpense from './components/IncomeExpense/IncomeExpense';
+import TransactionList from './components/TransactionList/TransactionList';
+import AddTransactionFrom from './components/AddTransactionForm/AddTransactionForm';
 
 const App = (props) => {
   return (
       <div className={style.app__container}>
           <Header/>
           <div className={style.app__content}>
-              <Balance/>
-              <IncomeExpense/>
-              <TransactionList/>
-              <AddTransactionFrom/>
+              <Balance />
+              <IncomeExpense />
+              <TransactionList />
+              <AddTransactionFrom />
           </div>
       </div>
   );
