@@ -1,10 +1,11 @@
-import {ADD_TRANSACTION, DELETE_TRANSACTION} from "./actionTypes";
+import { ADD_TRANSACTION } from './actionTypes';
+import { DELETE_TRANSACTION } from './actionTypes';
 
 const initialState = {
     transactions: []
 }
 
-const appReducer = (state = initialState, action) => {
+export const appReducer = (state = initialState, action) => {
     switch (action.type) {
         case DELETE_TRANSACTION :
             return {
@@ -20,5 +21,3 @@ const appReducer = (state = initialState, action) => {
             return state;
     }
 }
-
-export default appReducer;

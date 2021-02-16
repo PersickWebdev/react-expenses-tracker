@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import style from './Balance.module.css';
-import {connect} from "react-redux";
+import {connect} from 'react-redux';
 
 const Balance = (props) => {
     const amounts = props.transactions.map(transaction => transaction.amount);
