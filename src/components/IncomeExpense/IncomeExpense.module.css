@@ -4,8 +4,7 @@
     align-items: center;
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
-    border-radius: 5px;
-    background-color: #a8a8a8;
+    background-image: linear-gradient(#99873b, #adad2a);
 }
 
 .incomeExpense__box {
@@ -24,7 +23,7 @@
 }
 
 .incomeExpense__money_plus {
-    color: #008e0a;
+    color: #116515;
 }
 
 .incomeExpense__money_minus {

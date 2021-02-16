@@ -48,6 +48,6 @@ const AddTransactionForm = () => {
             </form>
         </div>
     );
-}
+};
 
 export default AddTransactionForm;

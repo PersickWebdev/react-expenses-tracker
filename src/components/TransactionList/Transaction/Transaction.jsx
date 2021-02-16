@@ -10,6 +10,6 @@ const Transaction = ({ id, text, amount, deleteTransaction }) => {
             <span>{amount}$</span>
         </li>
     );
-}
+};
 
 export default Transaction;

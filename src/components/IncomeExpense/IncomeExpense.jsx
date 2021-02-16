@@ -26,6 +26,6 @@ const IncomeExpense = () => {
             </div>
         </div>
     );
-}
+};
 
 export default IncomeExpense;
