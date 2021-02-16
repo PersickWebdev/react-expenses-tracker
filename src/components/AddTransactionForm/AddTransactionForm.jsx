@@ -1,11 +1,13 @@
-import React, {useState} from "react";
+import React from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTransaction } from '../../redux/actionCreators';
 import style from './AddTransactionForm.module.css';
-import {connect} from "react-redux";
-import {addTransaction} from "../../redux/actionCreators";
 
-const AddTransactionFrom = (props) => {
-    const [text, setText] = useState('');
-    const [amount, setAmount] = useState(0);
+const AddTransactionForm = () => {
+    const dispatch = useDispatch();
+    const [ text, setText ] = useState('');
+    const [ amount, setAmount ] = useState(0);
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
@@ -14,16 +16,16 @@ const AddTransactionFrom = (props) => {
             text: text,
             amount: parseInt(amount)
         }
-        props.addTransaction(newTransaction);
+        dispatch(addTransaction(newTransaction));
         setText('');
         setAmount(0);
     }
 
     return (
-        <div className={style.addTransaction__container}>
-            <h4 className={style.addTransaction__heading}>Add new transaction</h4>
-            <form className={style.form__container} onSubmit={onSubmitHandler}>
-                <div className={style.form__formControl}>
+        <div className={style['addTransaction__container']}>
+            <h4 className={style['addTransaction__heading']}>Add new transaction</h4>
+            <form className={style['form__container']} onSubmit={onSubmitHandler}>
+                <div className={style['form__formControl']}>
                     <label htmlFor="text">Text</label>
                     <input type="text"
                            placeholder='Enter transaction title ...'
@@ -31,7 +33,7 @@ const AddTransactionFrom = (props) => {
                            onChange={(event) => setText(event.target.value)}
                     />
                 </div>
-                <div className={style.form__formControl}>
+                <div className={style['form__formControl']}>
                     <label htmlFor="amount">
                         Amount <br/>
                         (negative - expense, positive - income)
@@ -42,10 +44,10 @@ const AddTransactionFrom = (props) => {
                            onChange={(event) => setAmount(event.target.value)}
                     />
                 </div>
-                <button className={style.form__button} type='submit'>Add Transaction</button>
+                <button className={style['form__button']} type='submit'>Add Transaction</button>
             </form>
         </div>
     );
 }
 
-export default connect(null, {addTransaction})(AddTransactionFrom);
+export default AddTransactionForm;

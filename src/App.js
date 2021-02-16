@@ -3,7 +3,7 @@ import { Header } from './components';
 import { Balance } from './components';
 import { IncomeExpense } from './components';
 import { TransactionList } from './components';
-import AddTransactionFrom from './components/AddTransactionForm/AddTransactionForm';
+import { AddTransactionForm } from './components';
 import style from './App.module.css';
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
               <Balance />
               <IncomeExpense />
               <TransactionList />
-              <AddTransactionFrom />
+              <AddTransactionForm />
           </div>
       </div>
   );
